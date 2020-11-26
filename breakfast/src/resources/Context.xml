@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.xworkz.breakfast.hotel.Owner" id="owner"></bean>
+	<bean class="com.xworkz.breakfast.Dosa" id="dosa" lazy-init="false"></bean>
+
+	<bean class=" com.xworkz.breakfast.Season" id="season">
+		<constructor-arg value="34"></constructor-arg>
+		<constructor-arg value="summer"></constructor-arg>
+	</bean>
+
+	<bean class=" com.xworkz.breakfast.Season" id="summer">
+		<constructor-arg value="34"></constructor-arg>
+	</bean>
+
+	<bean class=" com.xworkz.breakfast.Season" id="rainy">
+	</bean>
+
+	<bean class="com.xworkz.breakfast.Sun">
+		<constructor-arg value="red"></constructor-arg>
+		<constructor-arg value="34"></constructor-arg>
+		<constructor-arg value="34"></constructor-arg>
+		<constructor-arg value="8"></constructor-arg>
+	</bean>
+
+	<bean class=" com.xworkz.breakfast.Moon" id="beautiful">
+		<constructor-arg value="12"></constructor-arg>
+		<constructor-arg value="true"></constructor-arg>
+	</bean>
+
+	<bean class=" com.xworkz.breakfast.Moon" id="liveable">
+		<constructor-arg value="true"></constructor-arg>
+		<constructor-arg value="12"></constructor-arg>
+	</bean>
+	
+	
+	<bean class=" com.xworkz.breakfast.Earth" id="earth">
+		<constructor-arg value="true"></constructor-arg>
+		
+	</bean>
+	
+	<bean class=" com.xworkz.breakfast.Earth" id="earth2">
+		<constructor-arg value="true"></constructor-arg>
+		
+	</bean>
+	
+	<bean class=" com.xworkz.breakfast.Earth" id="earth3">
+		<constructor-arg value="true"></constructor-arg>
+		
+	</bean>
+	
+
+</beans>
