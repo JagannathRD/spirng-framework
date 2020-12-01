@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--Hotel  -->
+<bean class="com.xworkz.spring.Hotel.Hotel">
+<constructor-arg name="name" value="Prabhu"></constructor-arg>
+<property name="location" value="BLDE "></property>
+<property name="typeVeg" value="true"></property>
+</bean>	
+
+<!--Mobile  -->
+<bean class=" com.xworkz.spring.Hotel.Mobile" name="brand">
+<constructor-arg name="brand" value="MI"></constructor-arg>
+<property name="lteSupported" value="true"></property>
+</bean>	
+
+<bean class=" com.xworkz.spring.Hotel.Mobile" name="price">
+<constructor-arg name="price" value="12232.99"></constructor-arg>
+</bean>		
+
+<!--Monitor  -->
+<bean class="com.xworkz.spring.Hotel.Monitor" name="monitor">
+<constructor-arg name="width" value="20"></constructor-arg>
+<constructor-arg name="height" value="30"></constructor-arg>
+<property name="modelNo" value="12abc"></property>
+<property name="mfgDate" value="10dec2013"></property>
+</bean>	
+
+<!-- String  -->
+<bean class="java.lang.String" name="string">
+<constructor-arg value="X-Workz"></constructor-arg>
+</bean>
+
+<bean class="java.lang.String" name="str">
+<constructor-arg value="Jaggu"></constructor-arg>
+</bean>
+
+<!--Integer   -->
+
+<bean class="java.lang.Integer" name="integer" id="1">
+<constructor-arg  value="500" type="int"></constructor-arg>
+</bean>
+
+<bean class="java.lang.Integer" name="int">
+<constructor-arg  value="300" type="String"></constructor-arg>
+</bean>
+
+<!-- Byte -->
+<bean class="java.lang.Byte" >
+<constructor-arg  value="50" type="String"></constructor-arg>
+</bean>
+
+<!-- short -->
+<bean class="java.lang.Short" >
+<constructor-arg  value="502" type="String"></constructor-arg>
+</bean>
+
+<!-- Char-->
+<bean class="java.lang.Character" >
+<constructor-arg  value="q" type="char"></constructor-arg>
+</bean>
+
+<!-- Long -->
+<bean class="java.lang.Long" >
+<constructor-arg  value="5024890202" type="String"></constructor-arg>
+</bean>
+
+<!-- Float -->
+<bean class="java.lang.Float" >
+<constructor-arg  value="5.02" type="float"></constructor-arg>
+</bean>
+
+<!-- Double -->
+<bean class="java.lang.Double" >
+<constructor-arg  value="50.2234" type="String"></constructor-arg>
+</bean>
+
+<!-- Boolean -->
+<bean class="java.lang.Boolean" >
+<constructor-arg  value="false" type="boolean"></constructor-arg>
+</bean>
+
+
+
+
+</beans>
