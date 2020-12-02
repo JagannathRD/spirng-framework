@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<bean class=" com.xworkz.flights.Flights" id="beautiful">
+
+
+		<property name="flightsList">
+			<list>
+				<value>Air India</value>
+				<value>Air Asia</value>
+				<value>Emirates</value>
+				<value>Kingfisher</value>
+			</list>
+		</property>
+		
+<!--  		<property name="airports">
+			<util:set  set-class="java.util.TreeSet">
+				<value>Air India</value>
+				<value>Air Asia</value>
+				<value>Emirates</value>
+				<value>Kingfisher</value>
+			</util:set>
+		</property>
+		-->
+	</bean>
+
+
+
+</beans>
