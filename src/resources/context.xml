@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.xworkz.person.Person" id="person">
+		<property name="name" value="Jaggu"></property>
+		<property name="mobile" ref="newMobile"></property>
+
+	</bean>
+
+	<bean class="com.xworkz.mobile.Mobile" id="newMobile">
+		<property name="brand" value="MI"></property>
+		<property name="imeiNo" value="45633556"></property>
+	</bean>
+	
+	
+	<bean class="com.xworkz.power.Power" id="ac" init-method="lightens" destroy-method="powercut">
+	<property name="available" value="true"></property>
+	
+	</bean>
+	
+	
+	<bean class="com.xworkz.internet.Internet" id="hathway" init-method="connect" destroy-method="serverDown">
+	<constructor-arg ref="ac" >  </constructor-arg>
+	<property name="providerName" value="act"></property>
+	<property name="state" value="KA"></property>
+	<property name="code" value="586103"></property>
+	</bean>
+	
+	<bean class="com.xworkz.internet.Internet" id="act">
+	<constructor-arg ref="ac" >  </constructor-arg>
+	<property name="providerName" value="act"></property>
+	<property name="state" value="KA"></property>
+	<property name="code" value="586103"></property>
+	</bean>
+	
+	<bean class="com.xworkz.browser.Browser" id="browser">
+	<property name="internet" ref="act"></property>
+	</bean>
+	
+	
+</beans>
