@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:util="http://www.springframework.org/schema/util"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
@@ -10,22 +9,32 @@
 	http://www.springframework.org/schema/util/spring-util.xsd
 	">
 
-	<bean id="car" class="com.xworkz.vehivle.Vehicle">
-	<constructor-arg name="regNo" value="4907"></constructor-arg>
-	<constructor-arg name="owner" value="jaggu"></constructor-arg>
-	<constructor-arg ><ref bean="battery"></ref></constructor-arg>
-	<property name="fuel" ref="gasoline"></property>
+	<bean id="human" class="com.xworkz.human.Human" autowire="constructor">
+		<constructor-arg name="name" value="Indira" />
+		<constructor-arg name="age" value="55" />
 	</bean>
 
-	<bean id="gasoline" class=" com.xworkz.vehivle.Fuel">
-	<property name="type" value="petrol"></property>
-	<property name="price" value="87.2"></property>
-	<property name="quantity" value="3"></property>
+	<bean id="heart" class=" com.xworkz.human.Heart"></bean>
+
+	<!-- Ocean -->
+
+	<bean id="earth" class=" com.xworkz.earth.Earth" autowire="byName">
+		<property name="liveable" value="true"></property>
+		<property name="distanceFromSun" value="147"></property>
+	<!--  	<property name="pacific" ref="indian"></property>--> <!-- overrides -->
 	</bean>
-	
-	<bean id="battery" class="com.xworkz.vehivle.Battery">
-	<property name="capacity" value="12"></property>
-	<property name="power" value="15"></property>
+
+	<bean id="pacific" class="com.xworkz.earth.Ocean" autowire="byName">
+		<property name="name" value="pacific"></property>
+	</bean>
+
+	<bean id="indian" class="com.xworkz.earth.Ocean" autowire="byType">
+		<property name="name" value="indian"></property>            <!-- overrides -->
+	</bean>
+
+	<bean id="blueWhale" class="com.xworkz.earth.Whale">
+		<property name="weight" value="173"></property>
+		<property name="mammal" value="true"></property>
 	</bean>
 
 </beans>

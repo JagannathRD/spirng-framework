@@ -13,7 +13,7 @@ public class Vehicle {
 		this.battery = battery;
 	}
 
-	public boolean start(Fuel fuel) {
+	public boolean start() {
 		
 		boolean starts = false;
 		if (battery.charge() && battery.discharge()) {

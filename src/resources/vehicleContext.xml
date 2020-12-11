@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd
+	">
+
+	<bean id="car" class="com.xworkz.vehivle.Vehicle" autowire="constructor" >
+	<constructor-arg name="regNo" value="4907"></constructor-arg>
+	<constructor-arg name="owner" value="jaggu"></constructor-arg>
+	<!--  <constructor-arg ref="ion"/>-->  <!--  overrides autowire-->
+	 <property name="fuel" ref="gasoline"></property>
+	</bean>
+
+	<bean id="gasoline" class=" com.xworkz.vehivle.Fuel">
+	<property name="type" value="petrol"></property>
+	<property name="price" value="87.2"></property>
+	<property name="quantity" value="3"></property>
+	</bean>
+	
+	<bean id="battery" class="com.xworkz.vehivle.Battery">
+	<property name="capacity" value="12"></property>
+	<property name="power" value="15"></property>
+	</bean>
+	
+	<bean id="ion" class="com.xworkz.vehivle.Battery">
+	<property name="capacity" value="0"></property>
+	<property name="power" value="15"></property>
+	</bean>
+	
+
+</beans>
