@@ -71,5 +71,11 @@ public class CoronaVaccine implements Serializable   {
 		this.readyForTest = readyForTest;
 	}
 
+	@Override
+	public String toString() {
+		return "CoronaVaccine [vaccineId=" + vaccineId + ", name=" + name + ", country=" + country + ", developedBy="
+				+ developedBy + ", readyForTest=" + readyForTest + "]";
+	}
+
 	
 }

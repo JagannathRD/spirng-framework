@@ -23,7 +23,11 @@ public class Tester {
 			vaccine.setCountry("USA");
 			vaccine.setName("Pfizer");
 			vaccine.setReadyForTest(true);
-			dao.save(vaccine);
+//			dao.save(vaccine);
+			
+			dao.get(vaccine);
+			dao.getCountry(1);
+			dao.update("covi shield", "Russia", 2);
 		}
 
 	}
