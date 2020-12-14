@@ -11,18 +11,19 @@ public class CoronaVaccineDAO {
 
 	SessionFactory factory;
 
-	public CoronaVaccineDAO() {
+	public CoronaVaccineDAO(SessionFactory factory) {
 		System.out.println(this.getClass().getSimpleName() + " created...");
+		this.factory=factory;
 	}
 
 	public void save(CoronaVaccine vaccine) {
-		Session session = null;
+		Session session = null ;
 		Transaction transaction = null;
 
 		try {
-			Configuration configuration = new Configuration();
-			configuration.configure("resources/hibernate.cfg.xml");
-			factory = configuration.buildSessionFactory();
+//			Configuration configuration = new Configuration();
+//			configuration.configure("resources/hibernate.cfg.xml");
+//			factory = configuration.buildSessionFactory();
 			session = factory.openSession();
 			transaction = session.beginTransaction();
 
@@ -36,8 +37,7 @@ public class CoronaVaccineDAO {
 			if (session != null) {
 				session.close();
 			}
-			if (factory != null)
-				factory.close();
+			
 		}
 
 	}
