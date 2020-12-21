@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="customer" class=" com.xworkz.annotation.store.Customer" autowire="byType">
+	<property name="name" value="Jaggu"></property>
+	<property name="email" value="j2@gamil.com"></property>
+	</bean>
+	
+	<bean id="order" class="com.xworkz.annotation.store.OfflineStore"></bean>
+	
+	<bean id="onlineStore" class="com.xworkz.annotation.store.OnlineStore"></bean>
+	
+</beans>
