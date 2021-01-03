@@ -1,10 +1,20 @@
 package com.xworkz.covid.dto;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
+import javax.persistence.*;
+
+import org.hibernate.annotations.GenericGenerator;
+
+
+@Entity
+@Table(name="Patient_dto")
 public class PatientDTO implements Serializable{
 
+	@Id
+	@GenericGenerator(strategy="increment", name = "ref" )
+	@GeneratedValue(generator="ref")
+	private long id;
 	private String name;
 	private int age;
 	private String email;
