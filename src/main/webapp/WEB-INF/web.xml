@@ -1,0 +1,36 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+  <welcome-file>LandingPage.jsp</welcome-file>
+  </welcome-file-list>
+<servlet>
+  <servlet-name>ecom</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  <init-param>
+  <param-name>ContextConfigLocation</param-name>
+  <param-value>/WEB-INF/classes/spring.xml</param-value>
+  </init-param>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ecom</servlet-name>
+  <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <error-page>
+ <error-code>404</error-code>
+  <location>/404.jsp</location>
+  </error-page>
+  
+   <error-page>
+ <error-code>500</error-code>
+  <location>/500.jsp</location>
+  </error-page>
+  
+   
+  </web-app>
